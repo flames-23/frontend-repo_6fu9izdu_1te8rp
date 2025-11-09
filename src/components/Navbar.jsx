@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, FileDown } from 'lucide-react';
+import { downloadPPT } from './PPTExporter';
 
 export default function Navbar() {
   return (
@@ -13,9 +14,9 @@ export default function Navbar() {
           <a href="#deck" className="px-3 py-1.5 rounded-md hover:bg-black/5">Slides</a>
           <a href="#abstract" className="px-3 py-1.5 rounded-md hover:bg-black/5">Abstract</a>
           <a href="#contact" className="px-3 py-1.5 rounded-md hover:bg-black/5">Contact</a>
-          <a href="#" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#1E3A8A] text-white">
-            <FileDown className="w-4 h-4" /> Download PDF
-          </a>
+          <button onClick={downloadPPT} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#1E3A8A] text-white">
+            <FileDown className="w-4 h-4" /> Download PPTX
+          </button>
           <a href="https://github.com" target="_blank" rel="noreferrer" className="p-2 rounded-md hover:bg-black/5">
             <Github className="w-5 h-5" />
           </a>
